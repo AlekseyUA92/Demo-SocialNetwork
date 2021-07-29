@@ -1,0 +1,23 @@
+.nav {
+    grid-area: n;
+    background-color: #d7673c;
+    padding: 20px;
+}
+
+.item a {
+    color: #fff;
+    text-decoration: none;
+    margin-bottom: 10px;
+
+}
+/*.item a :hover {*/
+/*   cursor: pointer;*/
+/*}*/
+
+.item a.activeLink {
+    color: gold;
+}
+
+/*.item.active a:hover{*/
+/*  color: red;*/
+/*}*/

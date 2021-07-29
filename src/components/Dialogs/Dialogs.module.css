@@ -1,0 +1,66 @@
+.dialogs {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.dialogs_items {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+.dialogs_items a {
+  text-decoration: none;
+  color: honeydew;
+}
+
+.dialogs_items :hover {
+  color: maroon;
+}
+
+.dialogItem a {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.dialogItem a img {
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.dialog {
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  padding: 20px;
+}
+
+.message,
+.messageSecondPerson {
+  width: fit-content;
+  padding: 5px 5px;
+  margin: 5px 0;
+  border-radius: 10px;
+  background-color: #b1345d;
+  color: #f3fde9;
+}
+
+.messageSecondPerson {
+  background-color: white;
+  color: #226a6a;
+  align-self: flex-end;
+}
+
+.chatBox {
+  display: flex;
+  flex-direction: column;
+}
+.chatBox button {
+  width: fit-content;
+  border-radius: 10px;
+  margin-top: 5px;
+}

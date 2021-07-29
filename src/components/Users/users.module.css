@@ -1,0 +1,13 @@
+.usersPhoto {
+  width: 100px;
+  height: 100px;
+}
+
+.pages {
+  cursor: pointer;
+}
+
+.selectedPage {
+  color: azure;
+  font-weight: bold;
+}

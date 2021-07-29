@@ -1,0 +1,23 @@
+.wrapper img {
+}
+
+.descriptionBlock {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  background-color: rgb(216, 231, 201);
+  padding: 10px;
+}
+
+.infoBlock {
+  margin-left: 20px;
+}
+
+.jobIndikator {
+  background-color: rgb(21, 197, 21);
+}
+
+.usersPhoto {
+  width: 200px;
+  height: 200px;
+}
