@@ -21,3 +21,14 @@
   width: 200px;
   height: 200px;
 }
+
+.avaProfile {
+  display: flex;
+  flex-direction: column;
+}
+
+.photoInput {
+  margin-top: 10px;
+}
+.photoInput button {
+}

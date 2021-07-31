@@ -1,6 +1,6 @@
-import React, { Component, Suspense } from 'react';
+import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter, Route, withRouter } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, withRouter } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
@@ -34,26 +34,24 @@ class App extends Component {
       return <Preloader />;
     }
     return (
-      <BrowserRouter>
-        <div className="app-wrapper">
-          <HeaderContainer />
-          <Navbar />
-          <div className="app-wrapper-content">
-            <Route path="/dialogs" render={WithSuspense(DialogsContainer)} />
-            <Route
-              path="/profile/:userId?"
-              render={WithSuspense(ProfileContainer)}
-            />
-            <Route path="/users" render={() => <UsersContainer />} />
+      <div className="app-wrapper">
+        <HeaderContainer />
+        <Navbar />
+        <div className="app-wrapper-content">
+          <Route path="/dialogs" render={WithSuspense(DialogsContainer)} />
+          <Route
+            path="/profile/:userId?"
+            render={WithSuspense(ProfileContainer)}
+          />
+          <Route path="/users" render={() => <UsersContainer />} />
 
-            <Route path="/login" render={() => <LoginPage />} />
+          <Route path="/login" render={() => <LoginPage />} />
 
-            <Route path="/news" component={News} />
-            <Route path="/music" component={Music} />
-            <Route path="/settings" component={Settings} />
-          </div>
+          <Route path="/news" component={News} />
+          <Route path="/music" component={Music} />
+          <Route path="/settings" component={Settings} />
         </div>
-      </BrowserRouter>
+      </div>
     );
   }
 }
@@ -69,11 +67,12 @@ let AppContainer = compose(
 
 const MainApp = (props) => {
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <HashRouter>
+      {/* <HashRouter basename={process.env.PUBLIC_URL}> */}
       <Provider store={store}>
         <AppContainer />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 
