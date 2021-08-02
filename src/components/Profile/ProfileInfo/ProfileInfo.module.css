@@ -1,6 +1,3 @@
-.wrapper img {
-}
-
 .descriptionBlock {
   display: flex;
   flex-direction: row;
@@ -10,6 +7,10 @@
 }
 
 .infoBlock {
+  margin-left: 20px;
+}
+
+.infoBlockSettings {
   margin-left: 20px;
 }
 
@@ -31,4 +32,21 @@
   margin-top: 10px;
 }
 .photoInput button {
+}
+
+.statusWrapper {
+  margin-bottom: 20px;
+}
+
+.social {
+  margin-left: 20px;
+  color: blue;
+}
+.fullName {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.lookForAJob {
+  display: flex;
 }
