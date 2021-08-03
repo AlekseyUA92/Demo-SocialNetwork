@@ -4,7 +4,7 @@ import { required } from '../../../utils/validators/validators';
 import { CreateField, Input } from '../../Common/FormsControls/FormsControls';
 import styles from '../../Common/FormsControls/FormsControls.module.css';
 
-const LoginForm = ({ handleSubmit, error }) => {
+const LoginForm = ({ handleSubmit, error, captchaUrl }) => {
   return (
     <form onSubmit={handleSubmit}>
       {CreateField('Email', 'email', [required], Input)}
@@ -21,6 +21,11 @@ const LoginForm = ({ handleSubmit, error }) => {
         { type: 'checkbox' },
         'rememberMe'
       )}
+
+      {captchaUrl && <img src={captchaUrl} />}
+      {captchaUrl &&
+        CreateField('Symbols from captcha', 'captcha', [required], Input, {})}
+
       {error && <div className={styles.formSummaryError}>{error}</div>}
       <div>
         <button>Login</button>
