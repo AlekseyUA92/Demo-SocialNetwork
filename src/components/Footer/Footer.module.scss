@@ -1,0 +1,13 @@
+.footer {
+  grid-area: f;
+  background-color: #18a385;
+
+  .loginBlock {
+    .button {
+      width: 100px;
+      height: 50px;
+      background-color: yellow;
+      text-align: center;
+    }
+  }
+}

@@ -23,6 +23,7 @@ import store from './redux/redux-store';
 import { compose } from 'redux';
 import Preloader from './components/Common/Preloader/Preloader';
 import { WithSuspense } from './hoc/WithSuspense';
+import Footer from './components/Footer/Footer';
 
 const DialogsContainer = React.lazy(() =>
   import('./components/Dialogs/DialogsContainer')
@@ -73,6 +74,7 @@ class App extends Component {
             <Route path="*" render={() => <div>404 NOT FOUND</div>} />
           </Switch>
         </div>
+        <Footer />
       </div>
     );
   }

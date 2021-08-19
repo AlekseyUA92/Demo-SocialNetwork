@@ -29,6 +29,10 @@
   border-radius: 15px;
 }
 
+.dialogItem a.active {
+  color: maroon;
+}
+
 .dialog {
 }
 
