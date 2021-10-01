@@ -40,7 +40,7 @@ let NewPostForm = (props) => {
           name={'newPostText'}
           component={Textarea}
           placeholder={'Post message'}
-          validate={[required, maxLength10]}
+          // validate={[required, maxLength10]}
         />
       </div>
       <div>

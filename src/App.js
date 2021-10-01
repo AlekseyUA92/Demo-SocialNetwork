@@ -1,30 +1,30 @@
 import React, { Component } from 'react';
-import './App.css';
 import {
   BrowserRouter,
-  HashRouter,
   Redirect,
   Route,
   Switch,
   withRouter
 } from 'react-router-dom';
+import { connect, Provider } from 'react-redux';
+import { compose } from 'redux';
+import './App.css';
+import { WithSuspense } from './hoc/WithSuspense';
+
+import store from './redux/redux-store';
+import { initializeApp } from './redux/app-reducer';
+
 import Navbar from './components/Navbar/Navbar';
 import News from './components/News/News';
 import Music from './components/Music/Music';
 import Settings from './components/Settings/Settings';
 import UsersContainer from './components/Users/UsersContainer';
-// import ProfileContainer from './components/Profile/ProfileContainer';
-// import DialogsContainer from './components/Dialogs/DialogsContainer';
 import HeaderContainer from './components/Header/HeaderContainer';
 import LoginPage from './components/Login/Login';
-import { initializeApp } from './redux/app-reducer';
-import { connect, Provider } from 'react-redux';
-import store from './redux/redux-store';
-import { compose } from 'redux';
 import Preloader from './components/Common/Preloader/Preloader';
-import { WithSuspense } from './hoc/WithSuspense';
 import Footer from './components/Footer/Footer';
 
+// Lazy imports
 const DialogsContainer = React.lazy(() =>
   import('./components/Dialogs/DialogsContainer')
 );

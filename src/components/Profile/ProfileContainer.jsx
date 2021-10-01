@@ -29,6 +29,7 @@ class ProfileContainer extends React.Component {
 
   componentDidMount() {
     this.refreshProfile();
+    console.log('Profile Container was mount');
   }
 
   componentDidUpdate(prevProps, prevState, snapshot) {

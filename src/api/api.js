@@ -78,6 +78,7 @@ export const authAPI = {
     return instance.delete(`auth/login`);
   }
 };
+
 export const securityAPI = {
   getCaptchaURL() {
     return instance.get(`security/get-captcha-url`);

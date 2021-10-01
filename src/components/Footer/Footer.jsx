@@ -15,7 +15,6 @@ const Footer = (props) => {
           <a href="https://www.flaticon.com/" title="Flaticon">
             www.flaticon.com
           </a>
-          <div className={s.button}>Button</div>
         </div>
       </div>
     </footer>
